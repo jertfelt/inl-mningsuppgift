@@ -1,0 +1,67 @@
+body{
+background-color:rgb(165, 165, 132);
+}
+h3{
+  margin-left: 40px;
+  font-family: 'Courier New', Courier, monospace;
+  background-color:black;
+  width: 44%;
+  padding: 15px;
+  color: rgb(165, 165, 132);;
+}
+
+#todaysDate {
+  margin-left:10%;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#queuesystem {
+  background-color: rgb(0, 0, 0);
+  font-family: 'Courier New', Courier, monospace;
+  width: 45%;
+  padding: 15px;
+  font-weight: 900;
+  color:rgb(165, 165, 132);
+}
+
+#Application {
+  margin-left: 40px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.infotext {
+  margin-left: 5px;
+  width: 40%;
+  font-style: italic;
+}
+
+#fastTrackPerson {
+  background-color: coral;
+  font-weight: bold;
+
+}
+
+.knapp {
+  margin-left: 70%;
+  background-color:rgb(165, 165, 132);
+}
+
+#takeAwayFirst {
+  background-color: rgb(106, 206, 131);
+  padding:15px;
+  width: 48%;
+  font-weight: bold;
+}
+
+#h4{
+  color:coral;
+}
+
+#amountOfHappyCustomers {
+  margin-left: 40px;
+  font-family: 'Courier New', Courier, monospace;
+  background-color:black;
+  width: 44%;
+  padding: 15px;
+  color: rgb(165, 165, 132);;
+}
