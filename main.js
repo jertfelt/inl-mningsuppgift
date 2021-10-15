@@ -5,7 +5,7 @@ let todayDate= new Date().toLocaleDateString();
 dagensDatum.innerText = "Dagens datum: "+ todayDate;
 divToday.appendChild(dagensDatum);
 
-//uppgiften
+//appending osv:
 let userInput = document.querySelector("#queue");
 let sendNames = document.querySelector("#addPerson");
 let fastTracking = document.querySelector("#fastTrackPerson");
@@ -17,17 +17,17 @@ let messageWol = document.createElement("p");
 visibleQ.appendChild(queueList);
 visibleQ.appendChild(messageWol);
 
+//bonusdiv:
+let checkedInCustomers = document.querySelector("#happyCustomers");
+let checkoutparagraph = document.createElement("p");
+  checkedInCustomers.appendChild(checkoutparagraph);
 
-
-///UPPGIFTEN:
-
-//meddelande onumrerat ska sedan tas bort i själva addEvents. 
+//meddelandet:
 messageWol.innerText = "There’s currently no people standing in line" 
 messageWol.style.color="coral";
 
-//addEvent:
+//knapp 1:
 sendNames.addEventListener("click", () =>{
-//om tomt i fältet:
 if (userInput.value ===""){
   alert ("Du måste fylla i fältet")
 }
@@ -38,36 +38,31 @@ else {
 messageWol.innerText ="";
 
 // for loop som pushar ut namnet, går antagligen att göra med forEach också, jag vet, men är mer bekväm med for just nu
-
 for (i =0; i <nameArray.length; i++){ 
 nameList.innerText = newName;
 queueList.appendChild(nameList)
 };
 }
 })
+let count = 0;
 
 //fasttrack
 fastTracking.addEventListener("click", () =>{
-
   let newFirst = document.createElement("li");
   let firstName = userInput.value;
   messageWol.innerText ="";
+  //bekräftelseknapp:
   let reply = confirm("Placerar " + firstName + " först i kön. Gå vidare?")
-
-  if (reply ==true) { 
-    nameArray.unshift(firstName)
-  
-  //PREPEND ÄR EN LIFE SAVIOUR:
+  if (reply ==true) {
+    //själva funktionen: 
+    nameArray.unshift(firstName) 
     queueList.prepend(newFirst);
     newFirst.innerText = userInput.value + "(Fast Tracked)"
     newFirst.style.color ="coral";
-      
-    //om jag hinner: lägg till en funktion/if där fast track hamnar efter en som redan är fast trackad?
-    }
-    }  
-)
+    }  }  )
+
 //checka in-knapp:
-takeAwayFirst.addEventListener("click", () =>{
+takeAwayFirst.addEventListener("click", () =>{ 
 
 //byter färg när man klickar:
   if (takeAwayFirst.style.color === "coral")
@@ -79,12 +74,12 @@ takeAwayFirst.addEventListener("click", () =>{
   else { 
     takeAwayFirst.style.color="coral";
     takeAwayFirst.style.backgroundColor="black";
+
+    //timer så den byter tillbaka efter några mikrosekunder:
     setTimeout(function(){
       takeAwayFirst.style.color="black";
     takeAwayFirst.style.backgroundColor="rgb(106, 206, 131)";
-    takeAwayFirst.innerText= "CHECKA IN";
-  }, 0005)
-  } 
+    takeAwayFirst.innerText= "CHECKA IN";}, 0005)} 
 
 //om inga människor i kön:
 if (nameArray.length <=0) {
@@ -95,14 +90,21 @@ else {
   let reply = confirm("Tar bort: " + checkOutName + " från listan. Är det OK?")
   if (reply ==true){
    nameArray.shift();
-  
   queueList.removeChild(queueList.childNodes[0]);
    alert ("Incheckad!");
+
   //och så ta tillbaka meddelandet om det är tomt i listan igen:
   if (queueList.childElementCount ===0)
   {messageWol.innerText ="There’s currently no people standing in line"}
 
-}}})
+  //antal nöjda kunder:
+  count++;
+  checkoutparagraph.innerText = count + " antal incheckade idag!";
+  checkoutparagraph.style.backgroundColor ="black";
 
+
+}
+
+}})
 
 

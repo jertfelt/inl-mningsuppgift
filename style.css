@@ -1,6 +1,7 @@
 body{
 background-color:rgb(165, 165, 132);
 }
+
 h3{
   margin-left: 40px;
   font-family: 'Courier New', Courier, monospace;
@@ -57,11 +58,11 @@ h3{
   color:coral;
 }
 
-#amountOfHappyCustomers {
-  margin-left: 40px;
-  font-family: 'Courier New', Courier, monospace;
-  background-color:black;
-  width: 44%;
-  padding: 15px;
-  color: rgb(165, 165, 132);;
+#happyCustomers{
+  font-weight: 900;
+  color:rgb(106, 206, 131);
+  padding:15px;
+  width: 45%;
+  text-align: center;
+  
 }

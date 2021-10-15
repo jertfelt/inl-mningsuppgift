@@ -12,8 +12,8 @@ Kravställning
 
 4. Det ska finnas en Fast Track-knapp, som placerar personen längst fram i kön. (klar)
 
-5. När en person har checkat in, ska det gå att klicka på en knapp för att ta bort den första personen i kön. (shift) denna knapp ska dyka upp tillsammans med person namnet!
-får detta inte att fungera till bara en person 
+5. När en person har checkat in, ska det gå att klicka på en knapp för att ta bort den första personen i kön. 
+(klar)
 
 6. Om kön är tom, skriv ut meddelandet “There’s currently no people standing in line” på sidan. 
 (klar)
