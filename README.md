@@ -1,0 +1,1 @@
+A first assignment in javascript, during a course in Nackademin. Here, we were charged with creating a queue system and with buttons that sends persons in line to checkout, or first in line. I also added some features that I found neat and wanted to try out. To solve this task, I used a combination of DOM lists and array methods.
